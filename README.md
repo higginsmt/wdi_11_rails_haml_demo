@@ -12,7 +12,7 @@ https://github.com/haml/haml
 
 Set Haml up in your Rails app and Sublime
 * gem install haml on your command line or..
-* add gem 'haml' to your Gemfile
+* add gem 'haml-rails' to your Gemfile
 * package install haml for syntax highlighting
 
 Useful online tools
