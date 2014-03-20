@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ajaxer_news_lab_development
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: ajaxer_news_lab_test
+  pool: 5
