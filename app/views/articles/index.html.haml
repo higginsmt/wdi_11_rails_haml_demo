@@ -1,0 +1,11 @@
+%h2 All articles
+
+- @articles.each do |article|
+  .article
+    %h3= link_to article.title, article.url
+    %p
+      = render 'shared/byline', votable: article
+      |
+      = link_to pluralize(article.comments.count, 'comment'), article_comments_path(article)
+
+%p All articles printed!

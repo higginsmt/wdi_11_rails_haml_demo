@@ -1,0 +1,10 @@
+%h2 Submit article
+
+= form_for @article do |f|
+  %div
+    = f.label :title
+    = f.text_field :title
+  %div
+    = f.label :url, 'URL'
+    = f.text_field :url
+  = f.submit

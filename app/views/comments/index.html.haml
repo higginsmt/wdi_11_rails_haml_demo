@@ -1,0 +1,17 @@
+%h2= link_to @article.title, @article.url
+%p
+  by #{@article.user.email}
+  #{time_ago_in_words(@article.created_at)} ago
+
+%h3 Comments
+
+- if user_signed_in?
+  = form_for [@article, @comment] do |f|
+    = f.text_area :body, placeholder: 'Enter comment...'
+    = f.submit 'Add Comment'
+
+- @comments.each do |comment|
+  .comment
+    %hr
+    %p= render 'shared/byline', votable: comment
+    = simple_format(comment.body)

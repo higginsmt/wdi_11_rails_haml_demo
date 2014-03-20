@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  respond_to :json
+  respond_to :html, :json
   before_action :get_article_and_comments
   before_action :authenticate_user!, only: :create
 

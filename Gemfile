@@ -12,7 +12,7 @@ gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
 
-gem 'haml'
+gem 'haml-rails'
 
 group :development do
   gem 'coffee-rails-source-maps'

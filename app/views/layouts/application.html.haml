@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title HaxorNews
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %h1= link_to 'Haxor News', root_path
+
+    %nav
+      - if user_signed_in?
+        Signed in as #{current_user.email} |
+        = link_to 'Submit article', new_article_path
+        |
+        = link_to 'Sign out', destroy_user_session_path, method: :delete
+      - else
+        = link_to 'Sign in', new_user_session_path
+        to submit articles, comment, and cast votes.
+
+    %p.notice= notice
+    %p.alert= alert
+    = yield
+
